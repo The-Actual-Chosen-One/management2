@@ -139,7 +139,6 @@ def view():
             result = cursor.fetchall()
         return render_template("view.html", result=result)
 
-
 # /post?id=1
 @app.route("/post")
 def post():
@@ -155,6 +154,7 @@ def post():
             cursor.execute(sql, values)
             result = cursor.fetchall()
     return "here is the post: " + result["content"]
+
 
 # /update?id=1
 @app.route("/update", methods=["GET", "POST"])
