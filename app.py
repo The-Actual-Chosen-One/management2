@@ -140,6 +140,22 @@ def view():
         return render_template("view.html", result=result)
 
 
+# /post?id=1
+@app.route("/post")
+def post():
+    if not can_access():
+        flash("You don't have permission to do that!")
+        return redirect("/")
+
+    with create_connection() as connection:
+        with connection.cursor() as cursor:
+
+            sql = "SELECT * FROM users WHERE id = %s"
+            values = (request.args["id"])
+            cursor.execute(sql, values)
+            result = cursor.fetchall()
+    return "here is the post: " + result["content"]
+
 # /update?id=1
 @app.route("/update", methods=["GET", "POST"])
 def update():
