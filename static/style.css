@@ -1,0 +1,93 @@
+td,th{
+    border: 1px solid aqua;
+
+}
+
+table{
+    /*  make the borders touch each other other*/
+    border-collapse: collapse;
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+/* nth-child selects only the elements matching */
+tr:nth-child(2n) {
+    background-color: violet;
+}
+
+col:nth-child(2n + 1){
+    background-color: red;
+}
+h1{
+    color:cyan
+}
+
+
+body {
+    background-color: #241d33;
+    text-align: center;
+    font-family: 'Comic Sans MS';
+    border: 3px solid;
+    border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1;
+    margin: 20px auto;
+    color:white;
+}
+
+p {
+    color:aqua;
+}
+
+
+input:focus {
+
+}
+
+select{
+    margin-bottom: 10px;
+    background-color: darksalmon;
+    font-size: 1.2em;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button{
+    border: 2px outset darksalmon;
+    border-radius: 5px;
+    background-color: darksalmon;
+    color: white;
+    font-size: 1.2em;
+    padding: 5px 10px;
+
+}
+
+.checkbox {
+    apperance:none;
+    border-radius: 0;
+}
+
+.checkbox:checked {
+    background-image: url(https://cdn.pixabay.com/photo/2012/04/24/11/23/cross-39414_640.png);
+    background-size: contain;
+}
+
+input[type=checkbox] {
+}
+
+password {
+}
+
+.password-text {
+    display:none;
+}
+
+.show-password:checked ~ .password{
+    display: none;
+}
+
+.show-password:checked ~ .password-text {
+    display: inline;
+}
